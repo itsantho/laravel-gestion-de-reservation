@@ -17,18 +17,14 @@ class Booking extends Model
         'end_date',
     ];
 
-    // Définir la relation avec le modèle User
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    // Définir la relation avec le modèle Property
+    // Relation avec la propriété
     public function property()
     {
         return $this->belongsTo(Property::class);
     }
-
-    // Optionnel : Si vous souhaitez personnaliser les formats de date
-    protected $dates = ['start_date', 'end_date'];
 }

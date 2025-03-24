@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Accueil')
-@livewireScripts
+
 @section('content')
 
-    @livewireScripts
+        <h1>Bienvenue, {{ auth()->user()->name }} !</h1>
+
 @endsection
