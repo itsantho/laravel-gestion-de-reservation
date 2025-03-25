@@ -30,8 +30,8 @@
         </div>
 
         <!-- Bouton de réservation -->
-        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+        <x-primary-button type="submit" class="px-4 py-2 bg-primary text-white rounded hover:bg-blue-700">
             Réserver
-        </button>
+        </x-primary-button>
     </form>
 </div>

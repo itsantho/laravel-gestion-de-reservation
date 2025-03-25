@@ -8,7 +8,7 @@
 </p>
 
 ## Application Laravel
-Application permettant à des utilisateurs de réserver des propriétés sur une certaine durée
+### Application permettant à des utilisateurs de réserver des propriétés sur une certaine durée
 
 <img src="images/Capture d'écran 2025-03-25 191151.png" alt="app"></a>
 
