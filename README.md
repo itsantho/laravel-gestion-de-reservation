@@ -8,6 +8,15 @@
 </p>
 
 ## Application Laravel
+
+### initialisation
+commandes à effectuer :
+- npm install
+- npm run dev
+Utilisation de XAMPP lancer Apache et MySql puis (Modifier .env si erreurs) :
+- php artisan serve
+
+
 ### Application permettant à des utilisateurs de réserver des propriétés sur une certaine durée
 
 <img src="images/Capture d'écran 2025-03-25 191151.png" alt="app"></a>
@@ -19,7 +28,8 @@
 
 ## Blade et Livewire
 
-Les cartes de propriété, navbar et tout autre composant sont réaliser avec Blade. La communication vers une base de données mysql se fait grâce à Livewire
+Les cartes de propriétés, navbar et tout autre composant sont réalisés avec Blade. La communication vers une base de données mysql se fait grâce à Livewire.
+
 <img src="images/Capture d'écran 2025-03-25 191445.png" alt="Administration"></a>
 
 ## Filament
