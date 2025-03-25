@@ -8,12 +8,20 @@
     <title>@yield('title', 'Gestion des Réservations')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+    @filamentStyles
 </head>
 <body class="bg-gray-100 text-gray-900">
 <header class="bg-primary text-white p-5 flex justify-between">
     <h1 class="text-xl">Gestion des Réservations</h1>
     <div class="flex items-center space-x-4">
         @auth
+            @if(auth()->user()->canAccessPanel(\Filament\Facades\Filament::getPanel('admin')))
+                <x-nav-link href="{{  url('/admin') }}"
+                            class="text-white hover:text-gray-200">
+                    Administration
+                </x-nav-link>
+            @endif
+
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <x-nav-link href="{{ route('logout') }}"
@@ -50,5 +58,6 @@
     <p>&copy; 2025 - Mon Application</p>
 </footer>
 @livewireScripts
+@filamentScripts
 </body>
 </html>
