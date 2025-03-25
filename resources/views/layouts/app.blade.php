@@ -35,13 +35,12 @@
 
 <main class="container mx-auto p-6">
     @yield('content')
-    <h2>Bonjour {{ auth()->user()->name }} !</h2>
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         @foreach($properties as $property)
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                 <x-property-card :property="$property"></x-property-card>
             </div>
-
         @endforeach
 
     </div>
