@@ -22,10 +22,7 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        if ($panel->getId() === '5') {
-            return $this->is_admin === true;
-        }
-        return true;
+        return $this->is_admin;
     }
     protected $fillable = [
         'name',

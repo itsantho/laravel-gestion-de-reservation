@@ -54,8 +54,8 @@
     </div>
 </main>
 
-<footer class="text-center p-4 mt-6 bg-primary text-white">
-    <p>&copy; 2025 - Mon Application</p>
+<footer class="text-center p-4 mt-6 bg-primary text-white bottom-0 left-0 right-0">
+    <p>&copy; 2025 - itsantho</p>
 </footer>
 @livewireScripts
 @filamentScripts
