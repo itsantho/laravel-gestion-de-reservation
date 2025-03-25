@@ -13,6 +13,7 @@
 commandes à effectuer :
 - npm install
 - npm run dev
+  
 Utilisation de XAMPP lancer Apache et MySql puis (Modifier .env si erreurs) :
 - php artisan serve
 
