@@ -3,6 +3,8 @@
 namespace App\Providers\Filament;
 
 use App\Filament\Resources\WidgetsResource\Widgets\RedirectToAccueil;
+use App\Filament\Resources\WidgetsResource\Widgets\StatsBooking;
+use App\Filament\Resources\WidgetsResource\Widgets\StatsProperty;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -42,6 +44,8 @@ class FourPanelProvider extends PanelProvider
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
                 RedirectToAccueil::class,
+                StatsProperty::class,
+                StatsBooking::class,
             ])
             ->middleware([
                 EncryptCookies::class,
