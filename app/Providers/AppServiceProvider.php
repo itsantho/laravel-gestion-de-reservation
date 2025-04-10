@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Booking;
 use App\Models\Property;
 
+use Filament\Facades\Filament;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,5 +28,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('users',User::all());
         View::share('properties', Property::all());
         View::share('bookings',Booking::all());
+        
     }
 }

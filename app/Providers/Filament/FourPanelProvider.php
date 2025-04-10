@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\WidgetsResource\Widgets\RedirectToAccueil;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -30,6 +31,7 @@ class FourPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
+            ->brandName("innovQube")
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
@@ -39,6 +41,7 @@ class FourPanelProvider extends PanelProvider
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
+                RedirectToAccueil::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -54,5 +57,15 @@ class FourPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ]);
+    }
+    protected function getPages(): array
+    {
+        return [
+            function (Pages\Dashboard $page) {
+                $page->header(
+                    view('filament.pages.dashboard-header')
+                );
+            },
+        ];
     }
 }
